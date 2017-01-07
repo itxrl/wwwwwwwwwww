@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#wrap{
+				width: 800px;
+				border: 1px solid red;
+				margin: 0 auto;
+				overflow: hidden;
+				
+			}
+			#wrap ul{
+				float: left;
+				width: 200px;
+				box-sizing: border-box;
+			}
+			#wrap ul li{
+				list-style: none;
+				background: #ccc;
+				margin-bottom: 18px;
+			}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+</body>
+<script>
+	var hs = [];
+	var imgs = ["http://img.pconline.com.cn/images/upload/upc/tx/itbbs/1610/25/c47/28906783_1477398355944_mthumb.jpg" , "http://image.tianjimedia.com/uploadImages/2013/235/3K652B0WH4M5.jpg" , "http://image50.360doc.com/DownloadImg/2012/03/2213/22524134_22.jpg" , "http://image.tianjimedia.com/uploadImages/2015/083/30/VVJ04M7P71W2.jpg" , "http://img5q.duitang.com/uploads/item/201411/01/20141101112400_JrdMi.jpeg" , "http://pic.yesky.com/uploadImages/2014/315/00/J3U360Y9NYJ2.jpg" , "http://img.pconline.com.cn/images/upload/upc/tx/photoblog/1404/02/c1/32710598_32710598_1396404056265_mthumb.jpg" , "http://cdn.duitang.com/uploads/item/201205/03/20120503154538_G3mue.png" , "http://cdn.duitang.com/uploads/item/201511/19/20151119192810_k5duf.jpeg" , "http://p.ishowx.com/uploads/allimg/161104/290-161104161429.jpg" , "http://www.maitoufa.org/d/file/yule/20161119/gtqju2jwo1t.jpg" , "http://imgsrc.baidu.com/baike/pic/item/8644ebf81a4c510f64b65cfa6559252dd52aa5e4.jpg" , "http://f.hiphotos.baidu.com/imgad/pic/item/b3fb43166d224f4a7d50937e0ef790529922d196.jpg" , "http://f.hiphotos.baidu.com/imgad/pic/item/fcfaaf51f3deb48f397c42b3f71f3a292df57842.jpg" , "http://g.hiphotos.baidu.com/imgad/pic/item/f603918fa0ec08fa9f0b7dd85eee3d6d55fbda42.jpg" , "http://img.qhdxw.com/ykt/uploads/allimg/20161208/3630660-2f6b9b85359d9548b6f8ac3f36ebd429_550x3800x2.jpg" , "http://www.star84.com/userfile/contents/b7/143121501447707.jpg" , "http://www.miexue.com/d/file/2016/11/08/09/qperqr0pwhi26159.jpg" , "http://fun.youth.cn/yl24xs/201611/W020161123577675408882.jpg" , "http://www.people.com.cn/mediafile/pic/20161129/49/8015703597376496941.jpg" , "http://img01.youxiaoshuo.com/portal/201611/24/013618eamp5mym5599qcri.jpg"];
+
+        var wrap = document.getElementById("wrap");
+        var uls = document.getElementsByTagName("ul");
+        for(var i = 0;i<uls.length;i++){
+        		hs[i] =	uls[i].offsetHeight;
+        }
+
+        function getMinHeight (){
+        	var minIndex = 0;
+        	var mainValue = hs[0];
+        	for ()
+        }
+
+
+
+		function createLiAndImg (index) {
+			var img = new Image();
+			img.src = imgs[index];
+			var li = document.createElement("li");
+			img.onload = function (){
+				var x = 200*this.height / this.width;
+				this.style.width = 200 + "px";
+				this.style.height = x + "px";
+				li.appendChild(this);
+				li.style.height = x + "px";
+				li.style.width = 200 + "px";
+
+			}
+		}
+
+	for(var i=0;i<imgs.length;i++){
+		createLiAndImg(i);
+	}
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
